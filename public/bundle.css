@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: black;
+  color: white;
+}
+
+.navegacion {
+  width: 100%;
+  height: 70px;
+  margin: 15px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  box-shadow: 0 0 10px black;
+  background-color: rgb(0, 0, 0);
+  visibility:hidden;
+}
+
+nav {
+  display: flex;
+  width: 99.8%;
+  height: 80px;
+  align-items: center;
+  z-index: 99;
+  box-shadow: 0 0 10px black;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+i {
+  color: white;
+  cursor: pointer;
+}
+
+header input {
+  width: 61%;
+  height: 40px;
+  margin-right: 20px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+  background: #181717;
+  border: 1px solid white;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.btn2 {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  top: 27px;
+  right: 260px;
+  background: #b90f0f;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 45%;
+  cursor: pointer;
+}
+
+.container {
+  font-family: "Poppins", sans-serif;
+  display: flex; /* cambiar atributo a flex o none */
+  height: 60vh;
+  width: 100%;
+  background: black;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.principal {
+  position: absolute;
+  padding: 5px;
+}
+
+.principal h1 {
+  font-size: 60px;
+}
+
+.principal h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  color: #848484;
+  text-align: center;
+}
+
+.buscar {
+  top: 90px;
+  position: relative;
+  padding: 5px;
+}
+
+.buscar input {
+  width: 0;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: #ffffff;
+  outline: none;
+  border: 1px solid silver;
+  background-color: rgb(26, 27, 27);
+  border-radius: 30px;
+  transition: all 0.6s ease;
+  text-align: center;
+}
+
+.btn {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background: #b90f0f;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.buscar:hover input {
+  width: 240px;
+}
+
+.buscar input:focus {
+  width: 240px;
+}
+
+/* FORMATO DE VIDEO*/
+
+.container2 {  
+  display: none;  /* cambiar atributo a grid o none */
+  grid-template-columns: 2fr 1fr;
+  gap:15px;
+  align-items: flex-start;
+  padding: 5px 5%;
+}
+
+.container2 .main-video {
+  background: #000000;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.container2 .main-video iframe{
+  width: 100%;
+  border-radius: 5px;
+}
+
+.container2 .main-video .title{
+  color: rgb(249, 249, 249);
+  font-size: 23px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.container2 .video-list {
+  background: #282828f8;
+  border-radius: 5px;
+  height: 520px;
+  color: rgb(255, 255, 255);
+  overflow-y: scroll;
+
+}
+
+.container2 .video-list::-webkit-scrollbar{
+  width: 15px;
+}
+
+.container2 .video-list::-webkit-scrollbar-track{
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.container2 .video-list::-webkit-scrollbar-thumb{
+  background: #666;
+  border-radius: 50px;
+}
+
+.container2 .video-list .vid iframe{
+  width: 100px;
+  border-radius: 5px;
+}
+
+.container2 .video-list .vid{
+  display: flex;
+  align-items: center;
+  gap:15px;
+  background: #000000;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,.1);
+  cursor: pointer;
+}
+
+.container2 .video-list .vid:hover{
+  background: #eee;
+}
+
+.container2 .video-list .vid.active{
+  background: #000000;
+}
+.container2 .video-list .vid.active .title{
+  background: #000000;
+  color: #ffff;
+}
+
+.container2 .video-list .vid .title{
+  color: #333;
+  font-size:17px;
+}
+
+@media (max-width:991px){
+  .container2 {
+    grid-template-columns: 1.5fr 1fr;
+    padding: 10px;
+  }
+}
+
+@media (max-width:768px){
+  .container2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Cambia a un diseño de columna en pantallas más pequeñas */
+      text-align: center;
+  }
+  .buscar {
+      margin-top: 100px; /* Agrega espacio entre el texto y el campo de búsqueda en pantallas más pequeñas */
+  }
+}

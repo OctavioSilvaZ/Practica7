@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <title>Static Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./public/bundle.css" />
+    <script src="./public/bundle.js" defer></script>
+</head>
+
+<body>
+
+    <header class="navegacion" id="navegacion" >
+        <input type="text" id="recuperaID2" placeholder="Buscar nueva lista con ID">
+        <div class="btn2" onclick="obtenerTexto()"><i class="fas fa-search"></i></div>
+    </header>
+
+    <div class="container" id="contenedorInicial">
+        <div class="principal">
+            <h1>!Busca una playlist!</h1>
+            <h2>Ingresa su ID</h2>
+        </div>
+        <div class="buscar">
+            <input type="text" id="recuperaID" placeholder="Buscar" required />
+            <button onclick="obtenerTexto()" class="btn">
+             <i class="fas fa-search icon" ></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="container2" id="contenedorVideo">
+        <div class="main-video">
+            <div class="video">
+                <iframe id="idiframe" width="560" height="415" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3 class="title"> </h3>
+            </div>
+        </div>
+
+        <div class="video-list">
+        </div>
+
+    </div>
+
+</body>
+</html>
